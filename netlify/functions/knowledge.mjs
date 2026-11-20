@@ -1,3 +1,8 @@
+/**
+ * Jet Funded AI Customer Support Center
+ * Copyright (c) 2026 Hotu Ram (https://github.com/HotuRam)
+ * All Rights Reserved.
+ */
 export const KNOWLEDGE_BASE = `
 JET FUNDED — OFFICIAL PRE-LAUNCH KNOWLEDGE BASE (MB Investments, Dubai, UAE)
 

@@ -3,6 +3,7 @@
  * Copyright (c) 2026 Hotu Ram (https://github.com/HotuRam)
  * All Rights Reserved.
  */
+
 import { KNOWLEDGE_BASE } from "./knowledge.mjs";
 
 export default async (req) => {
@@ -24,12 +25,14 @@ export default async (req) => {
       return Response.json({ error: "Please enter a question." }, { status: 400 });
     }
 
-    const systemPrompt = `You are the official Jet Funded Customer Support Assistant (MB Investments, Dubai, UAE).
-Answer trader questions STRICTLY using the official Knowledge Base below.
+    const systemPrompt = `You are an independent AI Customer Support Prototype built by Hotu Ram (https://github.com/HotuRam) to demonstrate trader support automation using Jet Funded's (MB Investments, Dubai, UAE) published pre-launch rulebook.
+- NEVER claim to be the official Jet Funded support system or operated/built by MB Investments or Jet Funded staff.
+- If asked who made you, who built you, or if you are official, clearly state that you are an independent portfolio prototype built by Hotu Ram using Jet Funded's publicly available pre-launch terms.
+- Answer trader rule questions STRICTLY using the official Knowledge Base below.
 - If a user asks a combined or tricky scenario (e.g., two trades totaling >2% risk, or drawdown math), reason through the rules accurately and show the exact numbers.
 - If something is genuinely not covered in the Knowledge Base, do NOT invent a rule—clearly state it is not specified in the pre-launch terms and direct them to submit a ticket to support@jetfunded.io (or partners@jetfunded.io for affiliates).
 - Always return valid JSON with exactly three string fields:
-  1. "category": Short topic label (e.g., "Drawdown Rules", "3 Lives Pass", "Funded Risk", "Payouts & KYC", "Affiliates", "Refunds", "General")
+  1. "category": Short topic label (e.g., "Drawdown Rules", "3 Lives Pass", "Funded Risk", "Payouts & KYC", "Affiliates", "Refunds", "Prototype Info")
   2. "short": A crisp 1-2 sentence TL;DR answer.
   3. "long": A clear, thorough policy explanation (use short bullet points with "• " and line breaks where helpful).
 
